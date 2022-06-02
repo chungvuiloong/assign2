@@ -6,11 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class TweeterController extends AbstractController
+class SecurityController extends AbstractController
 {
-    #[Route('/', name: 'app_tweeter')]
-    public function index(): Response
+    #[Route('/login', name: 'app_login')]
+    public function login(): Response
     {
-        return $this->render('tweeter/index.html.twig');
+        return $this->render('security/login.html.twig');
     }
 }

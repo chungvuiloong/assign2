@@ -12,4 +12,4 @@ import './styles/app.css';
 import './bootstrap';
 
 
-console.log("Mrjay is edededed");
+// console.log("Mrjay is edededed");
