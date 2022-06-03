@@ -1,45 +1,181 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+        />
+        <link 
+            rel="stylesheet" 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        
+
         {% block stylesheets %}
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spartan&display=swap">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
-            {{ encore_entry_link_tags('app') }}
+            {# <link rel="stylesheet" href="/build/app.css"> #}
+            {# <link rel="stylesheet" href="{{asset('/build/app.css')}}"> #}
+            {# <link rel="stylesheet" href="{{asset('/assets/styles/app.css')}}"> #}
+            {# <link rel="stylesheet" href="/styles/app.css"> #}
         {% endblock %}
+
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
+
+
+        <title>{% block title %}{% endblock %}</title>
+
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light px-1">
-            <div class="container-fluid">
-                <a class="navbar-brand">
-                    <p class="pl-2 d-inline font-weight-bold" style="color: #444;">
-                        Cauldron Overflow Testing</p>
-                </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapsable" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbar-collapsable">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-3">
+                <a href="{{path('home')}}" class="navbar-brand my-2 mx-4"><h1>Team Stationary</h1></a>
+                <div class="container d-flex justify-content-end">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link"">Answers</a>
+                            <a href="{{path('home')}}" class="nav-link">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{path('aboutUs')}}" class="nav-link">About Us</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{path('contactUs')}}" class="nav-link">Contact Us</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{path('app_todos')}}" class="nav-link">To Do List</a>
                         </li>
                     </ul>
-
-                    <a class="nav-link text-black-50" href="{{ path('app_login') }}">Log In</a>
-                    <a href="#" class="btn btn-dark">Sign up</a>
                 </div>
-            </div>
-        </nav>
+            </nav>
 
-        {% block body %}{% endblock %}
-        <footer class="mt-5 p-3 text-center">
-            Made with <i style="color: red;" class="fa fa-heart"></i> by the guys and gals at <a style="color: #444; text-decoration: underline;" href="https://symfonycasts.com">SymfonyCasts</a>
-        </footer>
+        
+        </header>
+
+
+        <div class="container d-flex flex-column">
+            {% block body %}
+            
+            
+            {% endblock %}
+        </div>
+    
+            <!-- Footer -->
+        <footer class="text-center text-lg-start bg-primary">
+            <section
+                class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+                <span class="nav-link text-light">Get connected with us on social networks:</span>
+                </div>
+                <!-- Left -->
+
+                <!-- Right -->
+                <div class="d-flex flex-row align-items-center navbar-dark">
+                <a href="" class="me-4 text-reset ">
+                    <i class="fab fa-facebook text-light "></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter text-light"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-google text-light"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram text-light"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin text-light"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-github text-light"></i>
+                </a>
+                
+                </div>
+                <!-- Right -->
+            </section><!-- END Section: Social media -->
+
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <div class="row mt-3">
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4 text-light">
+                                <i class="fas fa-gem me-3 text-light"></i>Team Stationary
+                            </h6>
+                            <p class="text-light">This is just the footer. Nothing special.</p>
+                        </div>
+
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 navbar-dark">
+                            <a href="{{path('team')}}"><h6 class="text-uppercase fw-bold mb-4 text-light">The Team</h6></a>
+                                <p class="navbar-nav">
+                                    <a href="{{path('kevin')}}" class="nav-link">Kevin</a>
+                                </p>
+                                <p class="navbar-nav">
+                                    <a href="{{path('mrjay')}}" class="nav-link">MrJay</a>
+                                </p>
+                                <p class="navbar-nav">
+                                    <a href="{{path('eric')}}" class="nav-link">Eric</a>
+                                </p>
+                                <p class="navbar-nav">
+                                    <a href="{{path('nayyer')}}" class="nav-link">Nayyer</a>
+                                </p>
+                        </div>
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 navbar-dark">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4 text-light">
+                                Useful links
+                            </h6>
+                            <p class="navbar-nav">
+                                <a href="{{path('pricing')}}" class="nav-link">Pricing</a>
+                            </p>
+                            <p class="navbar-nav">
+                                <a href="#!" class="nav-link">Settings</a>
+                            </p>
+                            <p class="navbar-nav">
+                                <a href="#!" class="nav-link">Orders</a>
+                            </p>
+                            <p class="navbar-nav">
+                                <a href="#!" class="nav-link">Help</a>
+                            </p>
+                        </div><!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4 text-light">
+                                Contact
+                            </h6>
+                            <p class="text-light"><i class="fas fa-home me-3 text-light"></i>Rautatieläisenkatu 5, 00520 Helsinki, Finland</p>
+
+                            <p class="text-light">
+                                <i class="fas fa-envelope me-3 text-light"></i>cs@teamStationary.com
+                            </p>
+                            <p class="text-light"><i class="fas fa-phone me-3 text-light"></i> + 01 234 567 88</p>
+                            <p class="text-light"><i class="fas fa-print me-3 text-light"></i> + 01 234 567 89</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+
+                <!-- Copyright -->
+            <div class="text-center p-4 text-light" style="background-color: rgba(0, 0, 0, 0.25);">
+                    © 2021 Copyright:
+                <a class="text-reset fw-bold" href="#">TeamStationary.com</a>
+            </div> <!-- End Copyright -->
+        </footer><!-- End Footer -->
     </body>
 </html>
