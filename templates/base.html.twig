@@ -17,7 +17,7 @@
         
 
         {% block stylesheets %}
-            {# <link rel="stylesheet" href="{{asset('/public/app.css')}}"> #}
+            <link rel="stylesheet" href="{{asset('/build/app.css')}}">
         {% endblock %}
 
         <title>{% block title %} Assignment 2{% endblock %}</title>
@@ -165,7 +165,7 @@
     </body>
         {% block javascripts %}
          <!-- Runs react script-->
-            {# <script type="text/javascript" src="{{ asset('build/js/app.js') }}"></script> #}
+            <script type="text/javascript" src="{{ asset('build/js/react.js') }}"></script>
              
         {% endblock %}
 </html>

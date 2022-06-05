@@ -63,7 +63,7 @@ Encore
 
     // uncomment if you use React
     .enableReactPreset()
-    .addEntry('js/app', './public/js/app.js')
+    .addEntry('js/app', './public/js/react.js')
 
     // uncomment to get integrity="..." attributes on your script & link tags
     // requires WebpackEncoreBundle 1.4 or higher

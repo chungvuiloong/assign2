@@ -6,10 +6,10 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.css';
+import './styles/style.css';
 
 // start the Stimulus application
-import '../bootstrap';
+import './bootstrap';
 
 
-// console.log("Mrjay is edededed");
+console.log("Mrjay is edededed");
