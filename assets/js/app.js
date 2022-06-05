@@ -10,7 +10,6 @@
 
 // start the Stimulus application
 // import './bootstrap';
-// import '/Index';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -30,7 +29,7 @@ const Index = () => {
 export default Index;
 
 
-const root = ReactDOM.createRoot(document.getElementById('data'));
+const root = ReactDOM.createRoot(document.getElementById('app'));
 root.render(
     <Index />
 );
