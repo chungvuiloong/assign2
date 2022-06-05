@@ -17,11 +17,11 @@
         
 
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{asset('/build/app.css')}}">
+            {# <link rel="stylesheet" href="{{asset('../assets/styles/style.css')}}"> #}
             {{ encore_entry_script_tags( 'app') }}
         {% endblock %}
 
-        <title>{% block title %} Assignment 2{% endblock %}</title>
+        <title>{% block title %}Assignment 2{% endblock %}</title>
 
     </head>
     <body>
