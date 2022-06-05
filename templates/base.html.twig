@@ -166,6 +166,7 @@
         {% block javascripts %}
          <!-- Runs react script-->
             <script type="text/javascript" src="{{ asset('build/js/react.js') }}"></script>
+            {{ encore_entry_script_tags( 'react-app') }}
              
         {% endblock %}
 </html>

@@ -9,7 +9,18 @@
 import './styles/style.css';
 
 // start the Stimulus application
-import './bootstrap';
+import '../bootstrap';
 
 
-console.log("Mrjay is edededed");
+import React from 'react';
+import ReactDOM from 'react-dom';
+ 
+// import Items from './Components/Items';
+ 
+ const App = () => {
+     
+ 
+     
+ }
+ 
+ ReactDOM.render(<App />, document.getElementById('root'));
