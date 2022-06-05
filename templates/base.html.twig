@@ -18,6 +18,7 @@
 
         {% block stylesheets %}
             <link rel="stylesheet" href="{{asset('/build/app.css')}}">
+            {{ encore_entry_script_tags( 'app') }}
         {% endblock %}
 
         <title>{% block title %} Assignment 2{% endblock %}</title>
@@ -165,8 +166,7 @@
     </body>
         {% block javascripts %}
          <!-- Runs react script-->
-            <script type="text/javascript" src="{{ asset('build/js/react.js') }}"></script>
-            {{ encore_entry_script_tags( 'react-app') }}
+            {{ encore_entry_script_tags( 'app') }}
              
         {% endblock %}
 </html>
