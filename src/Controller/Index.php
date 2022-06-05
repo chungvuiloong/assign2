@@ -32,14 +32,6 @@ class Index extends AbstractController
         ]);
     }
 
-    #[Route('/todos', name: 'app_todos')]
-    public function toDo(): Response
-    {
-        return $this->render('todos/index.html.twig', [
-
-        ]);
-    }
-
     #[Route('/team', name: 'team')]
     public function team(): Response
     {
@@ -55,17 +47,17 @@ class Index extends AbstractController
         ]);
     }
 
-    #[Route('/eric', name: 'eric')]
-    public function eric(): Response
+    #[Route('/john', name: 'john')]
+    public function john(): Response
     {
-        return $this->render('pages/eric.html.twig', [
+        return $this->render('pages/john.html.twig', [
         ]);
     }
 
-    #[Route('/nayyer', name: 'nayyer')]
-    public function nayyer(): Response
+    #[Route('/jane', name: 'jane')]
+    public function jane(): Response
     {
-        return $this->render('pages/nayyer.html.twig', [
+        return $this->render('pages/jane.html.twig', [
         ]);
     }
 
